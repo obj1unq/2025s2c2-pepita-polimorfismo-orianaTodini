@@ -39,5 +39,33 @@ object manzana {
 	method energiaQueAporta() {
 		return base * madurez
 	}
+}
+object pepon{
+	var energia= 30 
+	const energiaAlVolar = 20
+	method energia() {
+	  return(energia)
+	}
+	method comer(alimento) {
+	  energia= energia + alimento.energiaQueAporta() / 2
+	}
+	method volar(kilomentos) {
+		energia= energia - energiaAlVolar -2*3
+	}
 	
+
+}
+object roque {
+  var aveActual= pepita
+  var cantidadDeCenasHastaAhora= 0
+   method darleDeComerA(unAve) {
+    aveActual = unAve
+  }
+  method comer(alimento) {
+	 aveActual.comer(alimento)
+	 cantidadDeCenasHastaAhora = cantidadDeCenasHastaAhora + 1 
+  }
+  method  cantidadDeCenas() {
+	return(cantidadDeCenasHastaAhora)
+  }
 }
